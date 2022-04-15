@@ -1,21 +1,31 @@
-@import url(libs/fonts.scss);
-
+@import url(utils/fonts.scss);
+@import url(utils/variables.scss);
+@import url(utils/mixins.scss);
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+$color-bg: #f5f5f5;
+@mixin shadow {
+  box-shadow: 0 5px 10px #3a383833;
+}
 
 body {
-  width: 100%;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 header {
   display: block;
   .logo {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
   }
   img {
+    width: 50%;
     height: 30px;
   }
 }
@@ -29,5 +39,116 @@ header {
       display: inline-block;
       font-size: normal;
     }
+  }
+}
+
+main {
+  display: block;
+  .localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #e6e6e6;
+    box-shadow: inset 0px 7px 3px -5px #3a383833;
+    i {
+      display: inline-block;
+      color: black;
+      font-size: 17px;
+    }
+    input {
+      text-align: center;
+      border: transparent;
+      background-color: #e6e6e6;
+      font-weight: bolder;
+      font-size: 17px;
+    }
+  }
+}
+.recherche_restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-bg;
+  padding: 20px 0 30px 0;
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 30px 10px 50px 10px;
+  }
+  .btn {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #3a383833;
+    color: white;
+    background: linear-gradient(to left top, $color-primary, $color-secondary);
+  }
+}
+
+.fonctionnement {
+  margin-top: 60px;
+  h2 {
+    text-align: left;
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.btn-fonctionnement {
+  margin: 10px 0px 10px 0px;
+  .fonctionnement_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 5px 30px 5px;
+    &_number {
+      position: relative;
+      left: 12px;
+      z-index: 2;
+      padding: 5px 10px;
+      border-radius: 100px;
+      border: 1px solid $color-primary;
+      background-color: $color-primary;
+      color: white;
+      font-size: 15px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 85%;
+      border: 1px solid transparent;
+      @include shadow;
+      border-radius: 20px;
+      padding: 5px;
+      background-color: $color-bg;
+      position: relative;
+      z-index: 1;
+      .fonctionnement_button_icon {
+        font-size: 24px;
+        margin-left: 20px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.image_restaurant {
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
   }
 }

@@ -11,6 +11,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <!--Header-->
     <header>
       <div class="logo">
         <a href="index.html">
@@ -18,5 +19,54 @@
         </a>
       </div>
     </header>
+    <main>
+      <!--Localisation-->
+      <div class="localisation">
+        <i class="fa-solid fa-location-dot"></i>
+        <form action="#" id="form" method="post">
+          <input
+            type="text"
+            id="ville"
+            name="ville"
+            placeholder="Paris, Belleville"
+          />
+        </form>
+      </div>
+      <!--Titre + Boutton-->
+      <section class="recherche_restaurant">
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+        <button class="btn" type="submit">Explorer nos restaurants</button>
+      </section>
+      <!--Fonctionnement-->
+      <section class="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <div class="btn-fonctionnement">
+          <article class="fonctionnement_button">
+            <p class="fonctionnement_button_number">1</p>
+            <a href="#">
+              <i
+                class="fonctionnement_button_icon fa-solid fa-mobile-screen-button"
+              ></i>
+              <h3>Choisissez un restaurant</h3>
+            </a>
+          </article>
+          <article class="fonctionnement_button">
+            <div class="fonctionnement_button_number">2</div>
+            <a href="#">
+              <i class="fonctionnement_button_icon fa-solid fa-bars"></i>
+              <h3>Composez votre menu</h3>
+            </a>
+          </article>
+          <article class="fonctionnement_button">
+            <div class="fonctionnement_button_number">3</div>
+            <a href="#">
+              <i class="fonctionnement_button_icon fa-solid fa-shop"></i>
+              <h3>Dégustez au restaurant</h3>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
