@@ -1,12 +1,40 @@
 @import url(utils/fonts.scss);
 @import url(utils/variables.scss);
 @import url(utils/mixins.scss);
+
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-bg: #f5f5f5;
+
 @mixin shadow {
   box-shadow: 0 5px 10px #3a383833;
+}
+
+@media screen and(min-width: 992px) {
+  body {
+    width: 80%;
+  }
+  .fonctionnement {
+    width: 40%;
+  }
+  .recherche_restaurant {
+    width: 40%;
+  }
+  .box_intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-bg;
+  }
+  .box_restaurant {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .card_restaurant {
+    width: 50%;
+  }
 }
 
 body {
@@ -26,7 +54,7 @@ header {
   }
   img {
     width: 50%;
-    height: 30px;
+    height: 7vw;
   }
 }
 .header-menu {
@@ -54,8 +82,8 @@ main {
     box-shadow: inset 0px 7px 3px -5px #3a383833;
     i {
       display: inline-block;
-      color: black;
       font-size: 17px;
+      margin-right: 5px;
     }
     input {
       text-align: center;
@@ -70,8 +98,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $color-bg;
   padding: 20px 0 30px 0;
+  background-color: $color-bg;
   h1 {
     font-size: 30px;
     font-weight: bold;
@@ -150,5 +178,54 @@ main {
     width: 100%;
     height: 350px;
     object-fit: cover;
+  }
+}
+
+.card_restaurant {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  @include shadow;
+  width: 85%;
+  height: 60vw;
+  margin: 20px;
+  img {
+    width: 100%;
+    height: 40vw;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .nouveau {
+    position: relative;
+    top: -150px;
+    left: 220px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 70px;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 30);
+    font-weight: bold;
+  }
+  .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -70px 10px 0 10px;
+    &_titre {
+    }
+    &_icone {
+      margin-top: 40px;
+      font-size: 20px;
+      &:hover {
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from($color-primary),
+          to($color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
 }
