@@ -1,0 +1,23 @@
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  17% {
+    transform-origin: bottom;
+    transform: scalex(0.4);
+    opacity: 0.5;
+  }
+  24% {
+    opacity: 1;
+    transform: scalex(0.6);
+  }
+  46% {
+    transform: scalex(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
