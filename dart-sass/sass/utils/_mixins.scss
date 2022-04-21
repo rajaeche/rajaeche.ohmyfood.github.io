@@ -5,3 +5,12 @@
 @mixin shadow-darker {
   box-shadow: 0 10px 15px $color-primary;
 }
+
+@mixin animation {
+  opacity: 1;
+  background-image: linear-gradient(to top, $color-primary, $color-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1);
+  animation: heart 1000ms ease-in-out;
+}
