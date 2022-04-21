@@ -1,23 +1,31 @@
 @keyframes heart {
   0% {
-    opacity: 0;
-    transform: scaleX(0);
+    transform: scaley(0);
   }
   17% {
-    transform-origin: bottom;
-    transform: scalex(0.4);
-    opacity: 0.5;
+    transform: scaley(0.4);
   }
   24% {
-    opacity: 1;
-    transform: scalex(0.6);
+    transform: scaley(0.6);
   }
   46% {
-    transform: scalex(0.8);
-    opacity: 0.5;
+    transform: scaley(0.8);
   }
   100% {
+    transform: scaley(1);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+  }
+
+  100% {
     opacity: 1;
-    transform: scaleX(1);
+    transform: rotateX(0);
+    transform-origin: bottom;
   }
 }
