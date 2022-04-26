@@ -11,6 +11,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <!--Header-->
     <header>
       <div class="logo">
         <a href="index.html">
@@ -18,5 +19,163 @@
         </a>
       </div>
     </header>
+    <main>
+      <!--Localisation-->
+      <div class="localisation">
+        <i class="fa-solid fa-location-dot"></i>
+        <form action="#" id="form" method="post">
+          <input
+            type="text"
+            id="ville"
+            name="ville"
+            placeholder="Paris, Belleville"
+          />
+        </form>
+      </div>
+      <div class="box_intro">
+        <!--Titre + Boutton-->
+        <section class="recherche_restaurant">
+          <h1>Réservez le menu qui vous convient</h1>
+          <p>
+            Découvrez des restaurants d'exception, séléctionnés par nos soins
+          </p>
+          <a href="#restaurants">
+            <button class="btn" type="submit">Explorer nos restaurants</button>
+          </a>
+        </section>
+        <!--Fonctionnement-->
+        <section class="fonctionnement">
+          <h2>Fonctionnement</h2>
+          <div class="btn-fonctionnement">
+            <article class="fonctionnement_button">
+              <p class="fonctionnement_button_number">1</p>
+              <a href="#restaurants">
+                <i
+                  class="fonctionnement_button_icon fa-solid fa-mobile-screen-button"
+                ></i>
+                <h3>Choisissez un restaurant</h3>
+              </a>
+            </article>
+            <article class="fonctionnement_button">
+              <div class="fonctionnement_button_number">2</div>
+              <a href="#restaurants">
+                <i class="fonctionnement_button_icon fa-solid fa-bars"></i>
+                <h3>Composez votre menu</h3>
+              </a>
+            </article>
+            <article class="fonctionnement_button">
+              <div class="fonctionnement_button_number">3</div>
+              <a href="#restaurants">
+                <i class="fonctionnement_button_icon fa-solid fa-shop"></i>
+                <h3>Dégustez au restaurant</h3>
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+      <section id="restaurants">
+        <h2>Restaurants</h2>
+        <div class="box_restaurant">
+          <article class="card_restaurant">
+            <a href="./resto-gout.html">
+              <img
+                src="dart-sass/sass/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="restaurant"
+              />
+              <div class="description">
+                <div class="description_titre">
+                  <h3>La palette du goût</h3>
+                  <p>Ménilmontant</p>
+                </div>
+                <div class="description_icone">
+                  <i
+                    class="fa-regular fa-heart description_icone--empty"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-heart description_icone--full"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </div>
+              <p class="nouveau">Nouveau</p>
+            </a>
+          </article>
+          <article class="card_restaurant">
+            <a href="/resto-note.html">
+              <img
+                src="dart-sass/sass/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="restaurant"
+              />
+              <div class="description">
+                <div class="description_titre">
+                  <h3>La note enchantée</h3>
+                  <p>Charonne</p>
+                </div>
+                <div class="description_icone">
+                  <i
+                    class="fa-regular fa-heart description_icone--empty"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-heart description_icone--full"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </div>
+              <p class="nouveau">Nouveau</p>
+            </a>
+          </article>
+          <article class="card_restaurant">
+            <a href="/resto-francaise.html">
+              <img
+                src="dart-sass/sass/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="restaurant"
+              />
+              <div class="description">
+                <div class="description-titre">
+                  <h3>À la française</h3>
+                  <p>Cité Rouge</p>
+                </div>
+                <div class="description_icone">
+                  <i
+                    class="fa-regular fa-heart description_icone--empty"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-heart description_icone--full"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="card_restaurant">
+            <a href="/resto-delice.html">
+              <img
+                src="dart-sass/sass/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="restaurant"
+              />
+              <div class="description">
+                <div class="description_titre">
+                  <h3>Le délice des sens</h3>
+                  <p>Folie-Méricourt</p>
+                </div>
+                <div class="description_icone">
+                  <i
+                    class="fa-regular fa-heart description_icone--empty"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fa-solid fa-heart description_icone--full"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
