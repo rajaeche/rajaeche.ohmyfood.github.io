@@ -53,7 +53,7 @@ body {
 
 header {
   display: block;
-  .logo {
+  #logo {
     text-align: center;
     padding: 10px;
   }
@@ -190,8 +190,8 @@ main {
 
 #restaurants {
   background-color: $color-bg;
-  margin: 20px 0 20px 0;
-  padding: 10px 0 10px 0;
+  margin: 20px 0 0px 0;
+  padding: 10px 0 100px 0;
   h2 {
     margin-left: 30px;
   }
@@ -375,6 +375,34 @@ main {
       h4 {
         font-size: 17px;
         margin-bottom: -5px;
+      }
+    }
+  }
+}
+footer {
+  padding: 10px 20px;
+  background-color: darken($color-bg, $amount: 70);
+  h3 {
+    color: white;
+    font-size: 20px;
+    font-family: "shrikhand", sans-serif;
+    font-weight: 100;
+  }
+  .box_footer {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        a {
+          font-size: 17px;
+          color: white;
+          font-weight: 300;
+          i {
+            margin-right: 10px;
+          }
+        }
       }
     }
   }
