@@ -1,4 +1,4 @@
-@import "./libs/fonts";
+@import "./utils/fonts";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/keyframes";
@@ -276,8 +276,13 @@ main {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-family: "shrikhand";
-    font-size: 24px;
+    transform-origin: bottom;
+    transform: translateY(0px);
+    animation: up 1s;
+    &_nom {
+      font-size: 30px;
+      font-family: "shrikhand";
+    }
     &_icone {
       position: relative;
       left: 10px;
@@ -307,6 +312,9 @@ main {
 .resto_menu {
   display: flex;
   flex-direction: column;
+  transform-origin: bottom;
+  transform: translateY(0px);
+  animation: up 2s;
   h3 {
     text-transform: uppercase;
     border-bottom: $color-tertiary 4px solid;
@@ -408,7 +416,7 @@ footer {
   }
 }
 
-main {
+/*main {
   display: block;
   .localisation {
     display: flex;
@@ -638,4 +646,4 @@ main {
     flex-direction: row;
     justify-content: space-between;
   }
-}
+}*/
