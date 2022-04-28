@@ -178,9 +178,115 @@
   }
 }
 
+@-webkit-keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes ohmyfood {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ohmyfood {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    opacity: 0.7;
+  }
+  50% {
+    -webkit-transform: scale(50);
+            transform: scale(50);
+    opacity: 0.5;
+  }
+  75% {
+    -webkit-transform: scale(250);
+            transform: scale(250);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(400);
+            transform: scale(400);
+    opacity: 0.2;
+  }
+}
+
+@keyframes expand {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    opacity: 0.7;
+  }
+  50% {
+    -webkit-transform: scale(50);
+            transform: scale(50);
+    opacity: 0.5;
+  }
+  75% {
+    -webkit-transform: scale(250);
+            transform: scale(250);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(400);
+            transform: scale(400);
+    opacity: 0.2;
+  }
+}
+
 @media screen and (min-width: 992px) {
   body {
     width: 80%;
+  }
+  .loader {
+    width: 85%;
+    left: -30px;
   }
   .fonctionnement {
     width: 40%;
@@ -229,6 +335,65 @@ body {
 body a {
   text-decoration: none;
   color: black;
+}
+
+.loader {
+  position: fixed;
+  z-index: 10;
+  font-family: "shrikhand", sans-serif;
+  font-size: 40px;
+  background: white;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: loader 3.5s forwards;
+          animation: loader 3.5s forwards;
+}
+
+.loader .oh {
+  color: #9356dc;
+  opacity: 0;
+  -webkit-animation: ohmyfood 0.7s ease-in-out both;
+          animation: ohmyfood 0.7s ease-in-out both;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.loader .my {
+  color: #ff79da;
+  -webkit-animation: ohmyfood 0.7s ease-in-out both;
+          animation: ohmyfood 0.7s ease-in-out both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.loader .food {
+  color: #99e2d0;
+  -webkit-animation: ohmyfood 0.7s ease-in-out both;
+          animation: ohmyfood 0.7s ease-in-out both;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+.loader .point {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  -webkit-animation: expand 1.4s ease-in-out both;
+          animation: expand 1.4s ease-in-out both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 header {
@@ -494,8 +659,8 @@ main .localisation input {
   -webkit-text-fill-color: transparent;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: heart 1000ms ease-in-out;
-          animation: heart 1000ms ease-in-out;
+  -webkit-animation: heart 400ms ease-in-out;
+          animation: heart 400ms ease-in-out;
 }
 
 .card_restaurant .description_icone:hover .description_icone--empty {
@@ -553,8 +718,8 @@ main .localisation input {
           transform-origin: bottom;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: up 1s;
-          animation: up 1s;
+  -webkit-animation: up 1s ease-out;
+          animation: up 1s ease-out;
 }
 
 .resto_titre_nom {
@@ -579,8 +744,8 @@ main .localisation input {
   -webkit-text-fill-color: transparent;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-animation: heart 1000ms ease-in-out;
-          animation: heart 1000ms ease-in-out;
+  -webkit-animation: heart 400ms ease-in-out;
+          animation: heart 400ms ease-in-out;
 }
 
 .resto_titre_icone:hover .resto_titre_icone--empty {
@@ -610,8 +775,8 @@ main .localisation input {
           transform-origin: bottom;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: up 2s;
-          animation: up 2s;
+  -webkit-animation: up 2s ease-in-out;
+          animation: up 2s ease-in-out;
 }
 
 .resto_menu h3 {
@@ -650,8 +815,8 @@ main .localisation input {
           transform: scaleX(1);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-animation: slide 200ms;
-          animation: slide 200ms;
+  -webkit-animation: slide 200ms ease-in-out both;
+          animation: slide 200ms ease-in-out both;
 }
 
 .resto_menu .resto_menu_choix:hover .resto_menu_choix--prix p {
