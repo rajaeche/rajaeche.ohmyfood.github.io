@@ -13,7 +13,7 @@
   <body>
     <!--Header-->
     <header>
-      <div class="logo">
+      <div id="logo">
         <a href="index.html">
           <img src="dart-sass/sass/images/logo/ohmyfood.png" alt="logo" />
         </a>
@@ -33,13 +33,15 @@
         </form>
       </div>
       <div class="box_intro">
-        <!--Titre + Boutton-->
+        <!--Titre + Bouton-->
         <section class="recherche_restaurant">
           <h1>Réservez le menu qui vous convient</h1>
           <p>
             Découvrez des restaurants d'exception, séléctionnés par nos soins
           </p>
-          <button class="btn" type="submit">Explorer nos restaurants</button>
+          <a href="#restaurants">
+            <button class="btn" type="submit">Explorer nos restaurants</button>
+          </a>
         </section>
         <!--Fonctionnement-->
         <section class="fonctionnement">
@@ -47,7 +49,7 @@
           <div class="btn-fonctionnement">
             <article class="fonctionnement_button">
               <p class="fonctionnement_button_number">1</p>
-              <a href="#">
+              <a href="#restaurants">
                 <i
                   class="fonctionnement_button_icon fa-solid fa-mobile-screen-button"
                 ></i>
@@ -56,14 +58,14 @@
             </article>
             <article class="fonctionnement_button">
               <div class="fonctionnement_button_number">2</div>
-              <a href="#">
+              <a href="#restaurants">
                 <i class="fonctionnement_button_icon fa-solid fa-bars"></i>
                 <h3>Composez votre menu</h3>
               </a>
             </article>
             <article class="fonctionnement_button">
               <div class="fonctionnement_button_number">3</div>
-              <a href="#">
+              <a href="#restaurants">
                 <i class="fonctionnement_button_icon fa-solid fa-shop"></i>
                 <h3>Dégustez au restaurant</h3>
               </a>
@@ -71,7 +73,7 @@
           </div>
         </section>
       </div>
-      <section class="restaurants">
+      <section id="restaurants">
         <h2>Restaurants</h2>
         <div class="box_restaurant">
           <article class="card_restaurant">
@@ -100,7 +102,7 @@
             </a>
           </article>
           <article class="card_restaurant">
-            <a href="#">
+            <a href="/resto-note.html">
               <img
                 src="dart-sass/sass/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                 alt="restaurant"
@@ -125,7 +127,7 @@
             </a>
           </article>
           <article class="card_restaurant">
-            <a href="#">
+            <a href="/resto-francaise.html">
               <img
                 src="dart-sass/sass/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                 alt="restaurant"
@@ -149,7 +151,7 @@
             </a>
           </article>
           <article class="card_restaurant">
-            <a href="#">
+            <a href="/resto-delice.html">
               <img
                 src="dart-sass/sass/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="restaurant"
@@ -175,5 +177,30 @@
         </div>
       </section>
     </main>
+    <footer>
+      <a href="#logo">
+        <h3>ohmyfood</h3>
+      </a>
+      <div class="box_footer">
+        <ul>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a
+            >
+          </li>
+          <li>
+            <a href=""> Mentions légales </a>
+          </li>
+          <li>
+            <a href="mailto: ohmyfood@paris.fr"> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
