@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Import Fichiers CSS*/
 @font-face {
   font-family: "Shrikhand";
   src: url(police/Shrikhand/Shrikhand-Regular.ttf);
@@ -83,62 +85,6 @@
   100% {
     -webkit-transform: rotateZ(360deg);
             transform: rotateZ(360deg);
-  }
-}
-
-@-webkit-keyframes slide {
-  0% {
-    opacity: 1;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  25% {
-    opacity: 1;
-    -webkit-transform: scaleX(0.25);
-            transform: scaleX(0.25);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: scaleX(0.5);
-            transform: scaleX(0.5);
-  }
-  75% {
-    opacity: 1;
-    -webkit-transform: scaleX(0.75);
-            transform: scaleX(0.75);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes slide {
-  0% {
-    opacity: 1;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  25% {
-    opacity: 1;
-    -webkit-transform: scaleX(0.25);
-            transform: scaleX(0.25);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: scaleX(0.5);
-            transform: scaleX(0.5);
-  }
-  75% {
-    opacity: 1;
-    -webkit-transform: scaleX(0.75);
-            transform: scaleX(0.75);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
   }
 }
 
@@ -280,6 +226,7 @@
   }
 }
 
+/*Media Queris Desktop*/
 @media screen and (min-width: 992px) {
   body {
     width: 80%;
@@ -306,6 +253,10 @@
             justify-content: space-between;
     background-color: #fff;
   }
+  #logo img {
+    width: 40%;
+    height: 5vw;
+  }
   #restaurants {
     border-radius: 20px;
   }
@@ -319,7 +270,15 @@
   }
   #restaurants .box_restaurant .card_restaurant .nouveau {
     top: -280px;
-    left: 280px;
+    left: 300px;
+  }
+}
+
+/*Media Queries Tablette*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .box_restaurant .card_restaurant {
+    width: 40%;
+    margin: 20px;
   }
 }
 
@@ -337,6 +296,7 @@ body a {
   color: black;
 }
 
+/*Animations Loader*/
 .loader {
   position: fixed;
   z-index: 10;
@@ -396,6 +356,7 @@ body a {
           animation-delay: 2.2s;
 }
 
+/*Header*/
 header {
   display: block;
   -webkit-animation: ohmyfood 1s ease-in-out 3s both;
@@ -409,9 +370,10 @@ header #logo {
 
 header img {
   width: 50%;
-  height: 7vw;
+  height: 8vw;
 }
 
+/*Flèche Retour Page Restaurant*/
 .header-menu {
   position: relative;
   margin: 10px;
@@ -424,7 +386,7 @@ header img {
 
 .header-menu .arrow .fa-arrow-left {
   display: inline-block;
-  font-size: 40px;
+  font-size: 4vw;
   font-weight: bold;
 }
 
@@ -434,7 +396,8 @@ main {
           animation: ohmyfood 1s ease-in-out 3s both;
 }
 
-main .localisation {
+/*Localisation*/
+.localisation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,13 +414,13 @@ main .localisation {
           box-shadow: inset 0px 7px 3px -5px #3a383833;
 }
 
-main .localisation i {
+.localisation i {
   display: inline-block;
   font-size: 17px;
   margin-right: 5px;
 }
 
-main .localisation input {
+.localisation input {
   text-align: center;
   border: transparent;
   background-color: #e6e6e6;
@@ -465,6 +428,7 @@ main .localisation input {
   font-size: 17px;
 }
 
+/*Section Recherche*/
 .recherche_restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -508,6 +472,7 @@ main .localisation input {
   cursor: pointer;
 }
 
+/*Section Fonctionnement*/
 .fonctionnement {
   margin: 60px 0 60px 0;
 }
@@ -576,6 +541,7 @@ main .localisation input {
   font-size: 20px;
 }
 
+/*Image Restaurant*/
 .image_restaurant img {
   width: 100%;
   height: 440px;
@@ -583,6 +549,7 @@ main .localisation input {
      object-fit: cover;
 }
 
+/*Box Restaurants Page Accueil*/
 #restaurants {
   background-color: #f5f5f5;
   margin: 20px 0 0px 0;
@@ -612,7 +579,7 @@ main .localisation input {
   -webkit-box-shadow: 0 5px 10px #3a383833;
           box-shadow: 0 5px 10px #3a383833;
   width: 85%;
-  height: 60vw;
+  height: 250px;
   margin: 20px;
 }
 
@@ -623,7 +590,7 @@ main .localisation input {
 
 .card_restaurant img {
   width: 100%;
-  height: 40vw;
+  height: 150px;
   border-radius: 20px 20px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -681,10 +648,11 @@ main .localisation input {
   opacity: 1;
 }
 
-.card_restaurant .nouveau {
+.nouveau {
   position: relative;
-  left: 220px;
-  top: -250px;
+  left: 230px;
+  bottom: 230px;
+  z-index: 9;
   padding: 5px;
   border-radius: 5px;
   width: 70px;
@@ -692,8 +660,10 @@ main .localisation input {
   background-color: #99e2d0;
   color: #32b091;
   font-weight: bold;
+  cursor: pointer;
 }
 
+/*Menu Restaurant*/
 .resto {
   margin-top: -80px;
   border-radius: 50px 50px 0 0;
@@ -722,8 +692,8 @@ main .localisation input {
           transform-origin: bottom;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: up 2s ease-out 2s;
-          animation: up 2s ease-out 2s;
+  -webkit-animation: up 2s ease-out 2.5s;
+          animation: up 2s ease-out 2.5s;
 }
 
 .resto_titre_nom {
@@ -779,8 +749,8 @@ main .localisation input {
           transform-origin: bottom;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  -webkit-animation: up 2s ease-in-out 2s;
-          animation: up 2s ease-in-out 2s;
+  -webkit-animation: up 2s ease-in-out 2.5s;
+          animation: up 2s ease-in-out 2.5s;
 }
 
 .resto_menu h3 {
@@ -813,7 +783,6 @@ main .localisation input {
 .resto_menu .resto_menu_choix:hover .resto_menu_choix--prix {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  /*animation: slide 200ms ease-in-out both;*/
 }
 
 .resto_menu .resto_menu_choix:hover .fa-circle-check {
@@ -827,8 +796,6 @@ main .localisation input {
 }
 
 .resto_menu .resto_menu_choix:hover .resto_menu_choix--nom h4 {
-  /*font-size: 17px;
-          margin-bottom: -5px;*/
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -844,10 +811,6 @@ main .localisation input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*justify-content: center;
-      align-items: center;
-      justify-self: flex-end;
-      align-self: stretch;*/
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
   -webkit-transition: all 0.4s ease-in-out;
@@ -903,6 +866,7 @@ main .localisation input {
   overflow: hidden;
 }
 
+/*Bouton Commander*/
 .commander {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,6 +885,7 @@ main .localisation input {
   padding: 15px 50px 15px 50px;
 }
 
+/*Footer*/
 footer {
   padding: 10px 20px;
   background-color: #434343;
