@@ -60,10 +60,6 @@
 
 @-webkit-keyframes rotation {
   0% {
-    -webkit-transform: all;
-            transform: all;
-  }
-  1% {
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
@@ -75,10 +71,6 @@
 
 @keyframes rotation {
   0% {
-    -webkit-transform: all;
-            transform: all;
-  }
-  1% {
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
@@ -226,7 +218,7 @@
   }
 }
 
-/*Media Queris Desktop*/
+/*Media Queries Desktop*/
 @media screen and (min-width: 992px) {
   body {
     width: 80%;
