@@ -9,6 +9,7 @@
 @mixin animation {
   opacity: 1;
   background-image: linear-gradient(to top, $color-primary, $color-secondary);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1);

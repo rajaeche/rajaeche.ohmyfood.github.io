@@ -1,0 +1,191 @@
+/*Utils*/
+@import "./utils/fonts";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+
+/*Layout*/
+@import "./layout/header";
+@import "./layout/footer";
+
+/*Components*/
+@import "./components/buttons";
+@import "./components/loader";
+
+/*Base*/
+@import "./base/base";
+@import "./base/media";
+
+/*Localisation*/
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #e6e6e6;
+  box-shadow: inset 0px 7px 3px -5px #3a383833;
+  i {
+    display: inline-block;
+    font-size: 17px;
+    margin-right: 5px;
+  }
+  input {
+    text-align: center;
+    border: transparent;
+    background-color: #e6e6e6;
+    font-weight: bolder;
+    font-size: 17px;
+  }
+}
+
+/*Section Recherche*/
+.recherche_restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 30px 0;
+  background-color: $color-bg;
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 30px 10px 50px 10px;
+  }
+}
+
+/*Section Fonctionnement*/
+.fonctionnement {
+  margin: 60px 0 60px 0;
+  h2 {
+    text-align: left;
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.btn-fonctionnement {
+  margin: 10px 0px 10px 0px;
+  .fonctionnement_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 5px 30px 5px;
+    &_number {
+      position: relative;
+      left: 12px;
+      z-index: 2;
+      padding: 5px 10px;
+      border-radius: 100px;
+      border: 1px solid $color-primary;
+      background-color: $color-primary;
+      color: white;
+      font-size: 15px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 85%;
+      border: 1px solid transparent;
+      @include shadow;
+      border-radius: 20px;
+      padding: 5px;
+      background-color: $color-bg;
+      position: relative;
+      z-index: 1;
+      .fonctionnement_button_icon {
+        font-size: 24px;
+        margin-left: 20px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/*Box Restaurants Page Accueil*/
+#restaurants {
+  background-color: $color-bg;
+  margin: 20px 0 0px 0;
+  padding: 10px 0 100px 0;
+  h2 {
+    margin-left: 30px;
+  }
+  .box_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.card_restaurant {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  @include shadow;
+  width: 85%;
+  height: 250px;
+  margin: 20px;
+  &:hover {
+    @include shadow-darker;
+  }
+  img {
+    width: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -15px 5px 5px 5px;
+    &_titre {
+      font-size: 17px;
+    }
+    &_icone {
+      font-size: 25px;
+      position: relative;
+      top: 40px;
+      &:hover {
+        & .description_icone--full {
+          transform-origin: bottom;
+          @include animation;
+        }
+        & .description_icone--empty {
+          opacity: 0;
+        }
+      }
+      &--full {
+        position: relative;
+        left: -31.2px;
+        opacity: 0;
+      }
+      &--empty {
+        opacity: 1;
+      }
+    }
+  }
+}
+.nouveau {
+  position: relative;
+  left: 230px;
+  bottom: 230px;
+  z-index: 9;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70px;
+  height: 20px;
+  background-color: $color-tertiary;
+  color: darken($color: $color-tertiary, $amount: 30);
+  font-weight: bold;
+  cursor: pointer;
+}

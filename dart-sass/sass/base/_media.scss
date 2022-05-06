@@ -1,0 +1,54 @@
+/*Media Queries Desktop*/
+@media screen and(min-width: 992px) {
+  body {
+    width: 80%;
+  }
+  .loader {
+    width: 85%;
+  }
+  .fonctionnement {
+    width: 40%;
+  }
+  .recherche_restaurant {
+    width: 40%;
+  }
+  .box_intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  #logo {
+    img {
+      width: 40%;
+      height: 5vw;
+    }
+  }
+  #restaurants {
+    border-radius: 20px;
+    .box_restaurant {
+      .card_restaurant {
+        width: 40%;
+        height: 20vw;
+        margin: 10px;
+        img {
+          height: 190px;
+        }
+        .nouveau {
+          top: -280px;
+          left: 300px;
+        }
+      }
+    }
+  }
+}
+
+/*Media Queries Tablette*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .box_restaurant {
+    .card_restaurant {
+      width: 40%;
+      margin: 20px;
+    }
+  }
+}

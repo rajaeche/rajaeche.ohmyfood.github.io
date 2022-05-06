@@ -1,0 +1,11 @@
+.btn {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #3a383833;
+  color: white;
+  background: linear-gradient(to left top, $color-primary, $color-secondary);
+  cursor: pointer;
+}

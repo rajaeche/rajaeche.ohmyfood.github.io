@@ -1,0 +1,188 @@
+/*Utils*/
+@import "./utils/fonts";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+
+/*Layout*/
+@import "./layout/header";
+@import "./layout/footer";
+
+/*Components*/
+@import "./components/buttons";
+@import "./components/loader";
+
+/*Base*/
+@import "./base/base";
+@import "./base/media";
+
+/*Flèche Retour Page Restaurant*/
+.header-menu {
+  position: relative;
+  margin: 10px;
+  .arrow {
+    position: absolute;
+    top: 20%;
+    .fa-arrow-left {
+      display: inline-block;
+      font-size: 4vw;
+      font-weight: bold;
+    }
+  }
+} /*Image Restaurant*/
+.image_restaurant {
+  img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+  }
+}
+
+/*Menu Restaurant*/
+.resto {
+  margin-top: -80px;
+  border-radius: 50px 50px 0 0;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  top: -80px;
+  background-color: $color-bg;
+  &_titre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transform-origin: bottom;
+    transform: translateY(0px);
+    animation: up 2s ease-out 2.5s;
+    &_nom {
+      font-size: 30px;
+      font-family: "shrikhand";
+    }
+    &_icone {
+      position: relative;
+      left: 10px;
+      font-size: 30px;
+      cursor: pointer;
+      &:hover {
+        & .resto_titre_icone--full {
+          transform-origin: bottom;
+          @include animation;
+        }
+        & .resto_titre_icone--empty {
+          opacity: 0;
+        }
+      }
+      &--full {
+        position: relative;
+        bottom: 6px;
+        opacity: 0;
+      }
+      &--empty {
+        opacity: 1;
+        position: absolute;
+      }
+    }
+  }
+}
+.resto_menu {
+  display: flex;
+  flex-direction: column;
+  transform-origin: bottom;
+  transform: translateY(0px);
+  animation: up 2s ease-in-out 2.5s;
+  h3 {
+    text-transform: uppercase;
+    border-bottom: $color-tertiary 4px solid;
+    width: 40px;
+  }
+  .resto_menu_choix {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    @include shadow;
+    &:hover {
+      @include shadow-darker;
+    }
+    &:hover {
+      & .resto_menu_choix--prix {
+        transform: translateX(0);
+      }
+      & .fa-circle-check {
+        animation: rotation 400ms ease-in-out 0s normal both;
+      }
+      & .resto_menu_choix--nom {
+        overflow: hidden;
+        margin-right: 0;
+        h4 {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        p {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+    &--prix {
+      display: flex;
+      transform: translateX(100px);
+      transition: all 0.4s ease-in-out;
+      p {
+        font-weight: bold;
+        align-self: flex-end;
+        margin-right: 20px;
+      }
+      .resto_menu_choix--icone {
+        background-color: $color-tertiary;
+        border-radius: 0 20px 20px 0;
+        padding: 35px;
+        justify-content: center;
+        align-items: center;
+
+        .fa-circle-check {
+          color: white;
+          font-size: 30px;
+          transform: rotateY(0deg);
+          transition: all;
+        }
+      }
+    }
+    &--nom {
+      margin-left: 10px;
+      margin-right: -100px;
+      overflow: hidden;
+      white-space: nowrap;
+      h4 {
+        font-size: 17px;
+        margin-bottom: -5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+/*Bouton Commander*/
+.commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .btn {
+    margin-bottom: 80px;
+    margin-top: -50px;
+    padding: 15px 50px 15px 50px;
+  }
+}
