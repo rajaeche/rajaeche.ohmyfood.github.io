@@ -283,6 +283,13 @@ footer .box_footer ul li a i {
   cursor: pointer;
 }
 
+.btn:hover {
+  -webkit-box-shadow: 0 10px 15px #9356dc;
+          box-shadow: 0 10px 15px #9356dc;
+  background: -webkit-gradient(linear, right bottom, left top, from(#a674e2), to(#ff9de4));
+  background: linear-gradient(to left top, #a674e2, #ff9de4);
+}
+
 /*Animations Loader*/
 .loader {
   position: fixed;
@@ -540,6 +547,16 @@ main {
   background-color: #f5f5f5;
   position: relative;
   z-index: 1;
+}
+
+.btn-fonctionnement .fonctionnement_button a:hover {
+  background-color: white;
+  -webkit-box-shadow: 0 10px 15px #9356dc;
+          box-shadow: 0 10px 15px #9356dc;
+}
+
+.btn-fonctionnement .fonctionnement_button a:hover .fonctionnement_button_icon {
+  color: #9356dc;
 }
 
 .btn-fonctionnement .fonctionnement_button a .fonctionnement_button_icon {

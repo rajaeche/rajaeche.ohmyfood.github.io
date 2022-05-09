@@ -100,6 +100,13 @@
       background-color: $color-bg;
       position: relative;
       z-index: 1;
+      &:hover {
+        background-color: lighten($color: $color-bg, $amount: 5);
+        @include shadow-darker;
+        .fonctionnement_button_icon {
+          color: $color-primary;
+        }
+      }
       .fonctionnement_button_icon {
         font-size: 24px;
         margin-left: 20px;

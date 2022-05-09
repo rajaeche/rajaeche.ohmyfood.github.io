@@ -284,6 +284,13 @@ footer .box_footer ul li a i {
   cursor: pointer;
 }
 
+.btn:hover {
+  -webkit-box-shadow: 0 10px 15px #9356dc;
+          box-shadow: 0 10px 15px #9356dc;
+  background: -webkit-gradient(linear, right bottom, left top, from(#a674e2), to(#ff9de4));
+  background: linear-gradient(to left top, #a674e2, #ff9de4);
+}
+
 /*Animations Loader*/
 .loader {
   position: fixed;

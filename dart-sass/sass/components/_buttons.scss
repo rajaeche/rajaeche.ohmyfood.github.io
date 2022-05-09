@@ -8,4 +8,12 @@
   color: white;
   background: linear-gradient(to left top, $color-primary, $color-secondary);
   cursor: pointer;
+  &:hover {
+    @include shadow-darker;
+    background: linear-gradient(
+      to left top,
+      lighten($color-primary, 7),
+      lighten($color-secondary, 7)
+    );
+  }
 }
